@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+}
+
+app-root {
+  display: block;
+  padding-top: 64px; /* 🔑 SAME AS NAVBAR HEIGHT */
+}

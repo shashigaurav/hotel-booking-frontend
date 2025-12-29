@@ -1,0 +1,18 @@
+<div class="my-bookings-container">
+  <h2>My Bookings</h2>
+
+  <p *ngIf="loading">Loading bookings...</p>
+
+  <div *ngIf="!loading && bookings.length === 0">
+    No bookings found.
+  </div>
+
+  <div class="booking-card" *ngFor="let b of bookings">
+    <p><b>Booking ID:</b> {{ b.id }}</p>
+    <p><b>Room:</b> {{ b.roomId }}</p>
+    <p><b>Check-In:</b> {{ b.checkIn }}</p>
+    <p><b>Check-Out:</b> {{ b.checkOut }}</p>
+    <p><b>Guests:</b> {{ b.guests }}</p>
+    <p class="status">{{ b.status }}</p>
+  </div>
+</div>

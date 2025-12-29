@@ -1,0 +1,23 @@
+<div class="booking-container">
+  <div class="booking-card">
+
+    <h2>Confirm Your Booking</h2>
+    <p>Room ID: {{ roomId }}</p>
+
+    <form (ngSubmit)="confirmBooking()">
+
+      <label>Check-In</label>
+      <input type="date" [(ngModel)]="bookingData.checkIn" name="checkIn" required>
+
+      <label>Check-Out</label>
+      <input type="date" [(ngModel)]="bookingData.checkOut" name="checkOut" required>
+
+      <label>Guests</label>
+      <input type="number" [(ngModel)]="bookingData.guests" name="guests" min="1" required>
+
+      <button type="submit">Confirm Booking</button>
+
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="auth-wrapper">
+
+  <!-- LEFT : HOTEL IMAGE / BRAND -->
+  <div class="auth-art">
+    <div class="brand">
+      <span class="back-arrow">←</span>
+      <span class="logo-text">HotelBooking</span>
+    </div>
+
+    <div class="art-content">
+      <h1>Stay Comfortably</h1>
+      <p>Luxury • Comfort • Best Prices</p>
+    </div>
+  </div>
+
+  <!-- RIGHT : LOGIN FORM -->
+  <div class="auth-form">
+
+    <div class="form-box">
+      <h2>👋 Welcome Back</h2>
+      <p class="subtitle">Login to book your perfect stay</p>
+
+      <form (ngSubmit)="onSubmit()">
+
+        <label>Email</label>
+        <input
+          type="email"
+          placeholder="Enter email"
+          [(ngModel)]="loginData.email"
+          name="email"
+          required
+        />
+
+        <label>Password</label>
+        <input
+          type="password"
+          placeholder="Enter password"
+          [(ngModel)]="loginData.password"
+          name="password"
+          required
+        />
+
+        <div class="options">
+          <label class="remember">
+            <input type="checkbox" />
+            Remember me
+          </label>
+          <a class="forgot">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">
+          Login
+        </button>
+
+        <p class="register-text">
+          New here?
+          <a routerLink="/register">Create an Account</a>
+        </p>
+
+      </form>
+    </div>
+
+  </div>
+
+</div>

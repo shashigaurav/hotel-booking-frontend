@@ -1,0 +1,30 @@
+<div class="room-container">
+
+  <h2>Available Rooms</h2>
+
+  <div *ngIf="loading" class="loading">
+    Loading rooms...
+  </div>
+
+  <div class="room-grid">
+    <div class="room-card" *ngFor="let room of rooms">
+
+      <h3>Room {{ room.roomNumber }}</h3>
+
+      <p class="type">Type: {{ room.roomType }}</p>
+      <p class="price">₹ {{ room.price }} / night</p>
+
+      <p class="status"
+         [class.available]="room.status === 'AVAILABLE'"
+         [class.booked]="room.status !== 'AVAILABLE'">
+        {{ room.status }}
+      </p>
+
+      <button routerLink="/login">
+        Book Now
+      </button>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,25 @@
+<div class="profile-container">
+  <div class="profile-card">
+    <h2>User Profile</h2>
+
+    <div class="profile-row">
+      <span>Name</span>
+      <span>{{ user?.fullName }}</span>
+    </div>
+
+    <div class="profile-row">
+      <span>Email</span>
+      <span>{{ user?.email }}</span>
+    </div>
+
+    <div class="profile-row">
+      <span>Phone</span>
+      <span>{{ user?.phone }}</span>
+    </div>
+
+    <!-- Optional logout -->
+    <!--
+    <button class="logout-btn" (click)="logout()">Logout</button>
+    -->
+  </div>
+</div>

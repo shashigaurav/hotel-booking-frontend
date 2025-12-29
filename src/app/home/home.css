@@ -1,0 +1,263 @@
+/* ========================= */
+/* 🌟 HERO SECTION */
+/* ========================= */
+
+.hero {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-image 1s ease-in-out;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.hero-content button {
+  padding: 14px 34px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hero-content button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================= */
+/* ✨ HERO ANIMATIONS */
+/* ========================= */
+
+.fade-in {
+  animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.4s;
+}
+
+.delay-2 {
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================= */
+/* 🏨 POPULAR HOTELS */
+/* ========================= */
+
+.hotel-showcase {
+  padding: 60px 40px;
+  background: #f4f6f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hotel-showcase h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* GRID */
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.hotel-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hotel-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.3);
+}
+
+.hotel-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.hotel-card h3 {
+  margin: 15px;
+  font-size: 20px;
+  color: #222;
+}
+
+.hotel-card p {
+  margin: 0 15px 20px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* ========================= */
+/* 🏨 AVAILABLE ROOMS */
+/* ========================= */
+
+.rooms-section {
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.rooms-section h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* GRID */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* ROOM CARD */
+.room-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.room-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* HEADER */
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.room-type {
+  background: #1d976c;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2ecc71;
+}
+
+/* TEXT */
+.room-card h3 {
+  margin: 10px 0;
+  font-size: 22px;
+  color: #222;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #dd2476;
+  margin-bottom: 18px;
+}
+
+/* BUTTON */
+.room-card button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.room-card button:hover {
+  opacity: 0.95;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}

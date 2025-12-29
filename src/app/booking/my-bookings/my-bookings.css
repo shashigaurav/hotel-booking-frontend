@@ -1,0 +1,26 @@
+.my-bookings-container {
+  min-height: 100vh;
+  padding: 40px;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.my-bookings-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.booking-card {
+  background: white;
+  color: #333;
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.status {
+  font-weight: 700;
+  color: green;
+}
