@@ -4,6 +4,13 @@
   </div>
 
   <div class="navbar-right">
+    <input
+  type="text"
+  placeholder="Search hotel or location..."
+  class="nav-search"
+  [(ngModel)]="searchText"
+  (input)="onSearch()"
+/>
 
     <a routerLink="/">Home</a>
     <a routerLink="/my-bookings">My Bookings</a>

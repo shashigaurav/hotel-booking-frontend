@@ -65,3 +65,40 @@
 .logout {
   background: linear-gradient(90deg, #ff416c, #ff4b2b);
 }
+.nav-search {
+  width: 260px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+
+  background-color: #ffffff;
+  color: #333;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* 🔍 Placeholder style */
+.nav-search::placeholder {
+  color: #999;
+  font-size: 13px;
+}
+
+/* ✨ Focus effect */
+.nav-search:focus {
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.35);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .nav-search {
+    width: 180px;
+  }
+
+  .nav-search:focus {
+    width: 220px;
+  }
+}
