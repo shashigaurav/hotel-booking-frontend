@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../core/services/auth';
-import { RouterLink } from '@angular/router';
-
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [FormsModule,RouterLink],
+  imports: [FormsModule, RouterLink],
   templateUrl: './register.html',
   styleUrls: ['./register.css']
 })
@@ -20,16 +19,20 @@ export class RegisterComponent {
     phone: ''
   };
 
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   onSubmit() {
     this.authService.register(this.registerData).subscribe({
       next: () => {
         alert('Register successful');
+        this.router.navigate(['/login']);
       },
       error: (err) => {
-        console.error(err);
-        alert('Register failed');
+        console.error('Register error:', err);
+        alert(err?.error || 'Register failed');
       }
     });
   }
