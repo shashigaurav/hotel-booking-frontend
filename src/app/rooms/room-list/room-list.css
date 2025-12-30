@@ -73,3 +73,11 @@
   font-weight: 600;
   cursor: pointer;
 }
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+

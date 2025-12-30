@@ -2,12 +2,21 @@
 
   <h2>Available Rooms</h2>
 
+  <!-- 🔍 Search Bar -->
+  <input
+    type="text"
+    placeholder="Search by room type or location"
+    [(ngModel)]="searchText"
+    (input)="filterRooms()"
+    class="search-input"
+  />
+
   <div *ngIf="loading" class="loading">
     Loading rooms...
   </div>
 
   <div class="room-grid">
-    <div class="room-card" *ngFor="let room of rooms">
+    <div class="room-card" *ngFor="let room of filteredRooms">
 
       <h3>Room {{ room.roomNumber }}</h3>
 
