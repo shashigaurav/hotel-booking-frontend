@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
-import { RegisterComponent } from './auth/register/register';
-import { LoginComponent } from './auth/login/login';
+
 import { Profile } from './profile/profile';
 import { AuthGuard } from './core/guards/auth-guard';
 import { RoomList } from './rooms/room-list/room-list';
@@ -37,6 +36,16 @@ export const routes: Routes = [
   loadComponent: () =>
     import('./booking/booking-success/booking-success')
       .then(m => m.BookingSuccessComponent)
+},
+{
+  path: 'booking',
+  loadComponent: () =>
+    import('./booking/booking').then(m => m.BookingComponent)
+},
+{
+  path: 'my-bookings',
+  loadComponent: () =>
+    import('./booking/my-bookings/my-bookings').then(m => m.MyBookingsComponent)
 },
 {
   path: 'my-bookings',

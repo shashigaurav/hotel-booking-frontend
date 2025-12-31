@@ -1,26 +1,4 @@
 <!-- ========================= -->
-<!-- 🔒 LOGOUT / NOT LOGGED IN -->
-<!-- ========================= -->
-
-<section
-  class="hero"
-  *ngIf="!authService.isLoggedIn()"
-  [style.backgroundImage]="'url(' + heroImages[currentImageIndex] + ')'"
->
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content fade-in">
-    <h1 class="slide-up">Find Your Perfect Stay</h1>
-    <p class="slide-up delay-1">
-      Luxury hotels • Best prices • Easy booking
-    </p>
-    <button class="slide-up delay-2" routerLink="/login">
-      Login to Book
-    </button>
-  </div>
-</section>
-
-<!-- ========================= -->
 <!-- 🏨 POPULAR HOTELS (SHOWCASE) -->
 <!-- ========================= -->
 
@@ -32,57 +10,67 @@
     <div class="hotel-card">
       <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" />
       <h3>Luxury Palace</h3>
+
+      <!-- ⭐ Rating -->
+      <div class="rating">
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="rating-text">5.0</span>
+      </div>
+
       <p>Delhi • 5 Star Hotel</p>
     </div>
 
     <div class="hotel-card">
       <img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb2101b" />
       <h3>Ocean View Resort</h3>
+
+      <div class="rating">
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="star">★</span>
+        <span class="rating-text">4.0</span>
+      </div>
+
       <p>Goa • Sea Facing</p>
     </div>
 
     <div class="hotel-card">
       <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" />
       <h3>City Comfort Inn</h3>
+
+      <div class="rating">
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="star">★</span>
+        <span class="star">★</span>
+        <span class="rating-text">3.0</span>
+      </div>
+
       <p>Bangalore • Budget Friendly</p>
     </div>
 
     <div class="hotel-card">
       <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" />
       <h3>Mountain Escape</h3>
+
+      <div class="rating">
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="star filled">★</span>
+        <span class="star">★</span>
+        <span class="rating-text">4.0</span>
+      </div>
+
       <p>Manali • Hill View</p>
     </div>
 
   </div>
-</section>
-
-<!-- ========================= -->
-<!-- ✅ LOGIN KE BAAD ROOMS -->
-<!-- ========================= -->
-
-<section class="rooms-section" *ngIf="authService.isLoggedIn()">
-
-  <h2>Available Rooms</h2>
-
-  <div class="rooms-grid">
-
-    <div class="room-card" *ngFor="let room of rooms">
-
-      <div class="room-header">
-        <span class="room-type">{{ room.roomType }}</span>
-        <span class="status">{{ room.status }}</span>
-      </div>
-
-      <h3>Room {{ room.roomNumber }}</h3>
-
-      <p class="price">₹ {{ room.price }} / night</p>
-
-      <button (click)="bookRoom(room.id)">
-        Book Now
-      </button>
-
-    </div>
-
-  </div>
-
 </section>

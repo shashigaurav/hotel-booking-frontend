@@ -261,3 +261,25 @@
     font-size: 16px;
   }
 }
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 6px 10px;
+}
+
+.star {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.rating-text {
+  font-size: 14px;
+  color: #555;
+  margin-left: 6px;
+}
+

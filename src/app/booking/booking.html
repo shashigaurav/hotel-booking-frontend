@@ -1,23 +1,14 @@
 <div class="booking-container">
-  <div class="booking-card">
+  <h2>Book Room</h2>
 
-    <h2>Confirm Your Booking</h2>
-    <p>Room ID: {{ roomId }}</p>
+  <label>Check-In</label>
+  <input type="date" [(ngModel)]="checkInDate">
 
-    <form (ngSubmit)="confirmBooking()">
+  <label>Check-Out</label>
+  <input type="date" [(ngModel)]="checkOutDate">
 
-      <label>Check-In</label>
-      <input type="date" [(ngModel)]="bookingData.checkIn" name="checkIn" required>
+  <label>Guests</label>
+  <input type="number" [(ngModel)]="guests">
 
-      <label>Check-Out</label>
-      <input type="date" [(ngModel)]="bookingData.checkOut" name="checkOut" required>
-
-      <label>Guests</label>
-      <input type="number" [(ngModel)]="bookingData.guests" name="guests" min="1" required>
-
-      <button type="submit">Confirm Booking</button>
-
-    </form>
-
-  </div>
+  <button (click)="bookRoom()">Confirm Booking</button>
 </div>
